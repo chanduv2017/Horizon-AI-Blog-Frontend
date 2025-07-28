@@ -6,7 +6,6 @@ import { Button } from "../components/ui/Button";
 import { Input } from "../components/ui/Input";
 import { Container } from "../components/ui/Container";
 import { Badge } from "../components/ui/Badge";
-import { TextEditor } from "./Publish";
 
 // API Placeholder - Replace with actual API calls
 const fetchBlogById = async (id: string) => {
@@ -193,9 +192,11 @@ export const EditBlog = () => {
                 <label className="block text-sm font-medium text-slate-700 mb-2">
                   Content
                 </label>
-                <TextEditor
+                <textarea
                   value={content}
                   onChange={(e) => setContent(e.target.value)}
+                  placeholder="Write your story content..."
+                  className="w-full min-h-[400px] p-4 border border-slate-300 rounded-lg resize-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 />
               </div>
 
